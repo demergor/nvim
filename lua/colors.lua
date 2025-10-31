@@ -32,11 +32,11 @@ local function my_colors()
   -- Syntax highlighting (warm Gruvbox-inspired tones)
   vim.api.nvim_set_hl(0, "Comment",     { fg = "#A88866", italic = true }) -- muted warm brown
   vim.api.nvim_set_hl(0, "Constant",    { fg = "#D27E99" }) -- pinkish
-  vim.api.nvim_set_hl(0, "String",      { fg = "#B2B873" }) -- warm green
+  vim.api.nvim_set_hl(0, "String",      { fg = "#B2D872" }) -- warm green
   vim.api.nvim_set_hl(0, "Character",   { fg = "#B2B873" })
   vim.api.nvim_set_hl(0, "Number",      { fg = "#D27E99" })
   vim.api.nvim_set_hl(0, "Boolean",     { fg = "#FFAA66", bold = true })
-  vim.api.nvim_set_hl(0, "Function",    { fg = "#A0B2B2", bold = true }) -- desaturated teal
+  vim.api.nvim_set_hl(0, "Function",    { fg = "#A0B2C4", bold = true }) -- desaturated teal
   vim.api.nvim_set_hl(0, "Keyword",     { fg = "#FF7755", bold = true }) -- warm red/orange
   vim.api.nvim_set_hl(0, "Type",        { fg = "#E6C07B", bold = true }) -- warm beige
   vim.api.nvim_set_hl(0, "Identifier",  { fg = "#FFDDA0" }) -- bright warm identifiers
