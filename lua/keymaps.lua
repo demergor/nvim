@@ -30,8 +30,8 @@ vim.keymap.set("n", "<leader>uc", function()
 end, { desc = "Update colors" })
 
 vim.keymap.set("n", "<leader>us", function()
-  package.loaded["editor_settings"] = nil
-  require("editor_settings")
+  package.loaded["settings"] = nil
+  require("settings")
 end, { desc = "Update editor settings" })
 
 vim.keymap.set("n", "<leader>uk", function()

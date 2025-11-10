@@ -1,6 +1,6 @@
 local function my_colors()
   -- Base
-  vim.api.nvim_set_hl(0, "Normal",      { fg = "#E6C07B", bg = "#000000" }) -- warm beige main text
+  vim.api.nvim_set_hl(0, "Normal",      { fg = "#ECCA7D", bg = "#000000" }) -- warm beige main text
   vim.api.nvim_set_hl(0, "CursorLine",  { bg = "#222222" })
   vim.api.nvim_set_hl(0, "CursorLineNr",{ fg = "#FFDDA0", bg = "#553322", bold = true }) -- bright warm line number
   vim.api.nvim_set_hl(0, "LineNr",      { fg = "#EEDDBB", bg = "#111111" }) -- subtle warm gray
@@ -32,13 +32,13 @@ local function my_colors()
   -- Syntax highlighting (warm Gruvbox-inspired tones)
   vim.api.nvim_set_hl(0, "Comment",     { fg = "#A88866", italic = true }) -- muted warm brown
   vim.api.nvim_set_hl(0, "Constant",    { fg = "#D27E99" }) -- pinkish
-  vim.api.nvim_set_hl(0, "String",      { fg = "#B2D872" }) -- warm green
+  vim.api.nvim_set_hl(0, "String",      { fg = "#B0D070" }) -- warm green
   vim.api.nvim_set_hl(0, "Character",   { fg = "#B2B873" })
-  vim.api.nvim_set_hl(0, "Number",      { fg = "#D27E99" })
+  vim.api.nvim_set_hl(0, "Number",      { fg = "#D27EC0" })
   vim.api.nvim_set_hl(0, "Boolean",     { fg = "#FFAA66", bold = true })
-  vim.api.nvim_set_hl(0, "Function",    { fg = "#A0B2C4", bold = true }) -- desaturated teal
-  vim.api.nvim_set_hl(0, "Keyword",     { fg = "#FF7755", bold = true }) -- warm red/orange
-  vim.api.nvim_set_hl(0, "Type",        { fg = "#E6C07B", bold = true }) -- warm beige
+  vim.api.nvim_set_hl(0, "Function",    { fg = "#B74455", bold = true }) -- desaturated teal
+  vim.api.nvim_set_hl(0, "Keyword",     { fg = "#FF7733", bold = true }) -- warm red/orange
+  vim.api.nvim_set_hl(0, "Type",        { fg = "#B07E7E", bold = true }) -- warm beige
   vim.api.nvim_set_hl(0, "Identifier",  { fg = "#FFDDA0" }) -- bright warm identifiers
   vim.api.nvim_set_hl(0, "Operator",    { fg = "#DDCCAA" })
   vim.api.nvim_set_hl(0, "Title",       { fg = "#FFDD77", bold = true })
