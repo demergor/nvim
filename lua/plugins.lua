@@ -22,6 +22,10 @@ require("lazy").setup({
         ensure_installed = { "pyright", "jdtls", "clangd" },
       }) 
 
+      vim.diagnostic.config({
+        virtual_text = true
+      })
+
       vim.lsp.config("pyright", {})
       vim.lsp.config("jdtls", {})
       vim.lsp.config("clangd", {})
