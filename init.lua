@@ -5,4 +5,4 @@ vim.g.mapleader = "\\"
 require("settings")
 require("keymaps")
 require("colors")
-require("plugins")
+require("core.lazy")
