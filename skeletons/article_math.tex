@@ -1,1 +1,53 @@
+\documentclass[a4paper,12pt]{article}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage[a4paper, margin=1.5cm]{geometry}
+
+\usepackage{etoolbox}
+\newbool{darkmode}
+\setbool{darkmode}{false}
+
+\usepackage{xcolor}
+\usepackage{pagecolor}
+
+\ifbool{darkmode}{
+  \pagecolor{black}
+  \color{white}
+}{
+  \pagecolor{white}
+  \color{black}
+}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{commath}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    pdftitle={},
+    pdfauthor={Jimmy Thien Bao Nguyen},
+    pdfsubject={},
+    pdfkeywords={}
+}
+
+\title{}
+\author{Jimmy Thien Bao Nguyen}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\end{document}

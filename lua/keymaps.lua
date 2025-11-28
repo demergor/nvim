@@ -15,29 +15,10 @@ vim.keymap.set("n", "<leader>em", function()
 end, { desc = "Toggle diagnostic virtual text" })
 
 -- LaTeX skeletons selection
-vim.keymap.set('n', '<leader>ls', function()
-  require('telescope.builtin').find_files({
-    prompt_title = "LaTeX Skeletons",
-    cwd = "~/.config/nvim/skeletons",
-    attach_mappings = function(prompt_bufnr, map)
-      local actions = require('telescope.actions')
-      local action_state = require('telescope.actions.state')
-      map('i', '<CR>', function()
-        local selection = action_state.get_selected_entry()
-        actions.close(prompt_bufnr)
-
-        -- Prompt for new file name (defaults to current buffer name)
-        local new_filename = vim.fn.input("New file name: ", vim.fn.expand("%:t"))
-        vim.cmd("edit " .. new_filename)
-
-        -- Read skeleton content
-        local lines = vim.fn.readfile(selection.path)
-        vim.api.nvim_buf_set_lines(0, 0, -1, false, lines)
-      end)
-      return true
-    end
-  })
+vim.keymap.set("n", "<leader>sk", function()
+  require("skeletons").insert_skeleton_picker()
 end)
+
 
 -- Grapple keymaps
 vim.keymap.set("n", "<leader>mt", function()
