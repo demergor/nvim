@@ -1,6 +1,6 @@
 local function my_colors()
   -- Base
-  vim.api.nvim_set_hl(0, "Normal",      { fg = "#ECCA7D", bg = "#000000" }) -- warm beige main text
+  vim.api.nvim_set_hl(0, "Normal",      { fg = "#faac69", bg = "#000000" }) -- warm beige main text
   vim.api.nvim_set_hl(0, "CursorLine",  { bg = "#222222" })
   vim.api.nvim_set_hl(0, "CursorLineNr",{ fg = "#FFDDA0", bg = "#553322", bold = true }) -- bright warm line number
   vim.api.nvim_set_hl(0, "LineNr",      { fg = "#EEDDBB", bg = "#111111" }) -- subtle warm gray
@@ -36,7 +36,7 @@ local function my_colors()
   vim.api.nvim_set_hl(0, "Character",   { fg = "#B2B873" })
   vim.api.nvim_set_hl(0, "Number",      { fg = "#D27EC0" })
   vim.api.nvim_set_hl(0, "Boolean",     { fg = "#FFAA66", bold = true })
-  vim.api.nvim_set_hl(0, "Function",    { fg = "#B74455", bold = true }) -- desaturated teal
+  vim.api.nvim_set_hl(0, "Function",    { fg = "#B63939", bold = true }) -- desaturated teal
   vim.api.nvim_set_hl(0, "Keyword",     { fg = "#FF7733", bold = true }) -- warm red/orange
   vim.api.nvim_set_hl(0, "Type",        { fg = "#B07E7E", bold = true }) -- warm beige
   vim.api.nvim_set_hl(0, "Identifier",  { fg = "#FFDDA0" }) -- bright warm identifiers
