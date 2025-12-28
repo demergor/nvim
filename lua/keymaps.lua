@@ -7,12 +7,12 @@ vim.keymap.set("n", "<leader>t", ":!nohup alacritty >/dev/null 2>&1 &<CR>", { de
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
--- Toggle virtual text (inline errors)
-vim.keymap.set("n", "<leader>em", function()
-  local current = vim.diagnostic.config().virtual_text
-  vim.diagnostic.config({ virtual_text = not current })
-  print("Virtual text: " .. (not current and "ON" or "OFF"))
-end, { desc = "Toggle diagnostic virtual text" })
+vim.keymap.set(
+  "n",
+  "<leader>em",
+  "<cmd>lua vim.diagnostic.open_float(nil, {focus=false})<CR>",
+  { noremap = true, silent = true, desc = "Open floating diagnostics window" }
+)
 
 -- LaTeX skeletons selection
 vim.keymap.set("n", "<leader>sk", function()
