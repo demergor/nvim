@@ -55,6 +55,14 @@ vim.keymap.set('n', '<leader>fh', function()
 end, { desc = "Help tags" })
 
 
+-- Restart LSP
+vim.keymap.set(
+  "n",
+  "<leader>lspr",
+  "<cmd>LspRestart<CR>", 
+  { noremap = true, silent = true, desc = "Reload JDTLS workspace" }
+)
+
 -- Reload colors
 vim.keymap.set("n", "<leader>uc", function()
   package.loaded["colors"] = nil

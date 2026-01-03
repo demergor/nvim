@@ -2,13 +2,14 @@ local function my_colors()
   -- Text
   vim.api.nvim_set_hl(0, "Normal",            { fg = "#ffac69", bg = "#000000" })
   vim.api.nvim_set_hl(0, "Function",          { fg = "#b00b1e", bold = true })
-  vim.api.nvim_set_hl(0, "Number",            { fg = "#ff69a1" })
+  vim.api.nvim_set_hl(0, "Number",            { fg = "#ffa7a9" })
   vim.api.nvim_set_hl(0, "String",            { fg = "#9faf90" })
   vim.api.nvim_set_hl(0, "Comment",           { fg = "#898980", italic = true }) -- this is a comment
   vim.api.nvim_set_hl(0, "Statement",         { fg = "#d1d5d2", bold = true })
   vim.api.nvim_set_hl(0, "Special",           { fg = "#ff7739", bold = false })
   vim.api.nvim_set_hl(0, "Type",              { fg = "#b69391", bold = true })
   vim.api.nvim_set_hl(0, "Delimiter",         { fg = "#efe9f4" })
+  vim.api.nvim_set_hl(0, "Constant",          { fg = "#ffa7a9" })
 
   -- Cursor
   vim.api.nvim_set_hl(0, "Cursor",            { fg = "#000000", bg = "#ffffff" })
