@@ -2,14 +2,14 @@ local function my_colors()
   vim.api.nvim_set_hl(0, "Normal",        { fg = "#d8a06a", bg = "#000000" })
 
   vim.api.nvim_set_hl(0, "Identifier",    { fg = "#ded6d0" })
-  vim.api.nvim_set_hl(0, "@variable",     { fg = "#e0e0e0" })
+  vim.api.nvim_set_hl(0, "@variable",     { fg = "#cdd0cd" })
 
-  vim.api.nvim_set_hl(0, "Statement",     { fg = "#c1c8d0", bold = true })
+  vim.api.nvim_set_hl(0, "Statement",     { fg = "#cfa8bc", bold = true })
   vim.api.nvim_set_hl(0, "Function",      { fg = "#c15f5f", bold = true })
   vim.api.nvim_set_hl(0, "Type",          { fg = "#e0703a", bold = false })
   vim.api.nvim_set_hl(0, "Special",       { fg = "#e0703a", bold = false })
 
-  vim.api.nvim_set_hl(0, "String",        { fg = "#b1bea5" })
+  vim.api.nvim_set_hl(0, "String",        { fg = "#a1bf95" })
   vim.api.nvim_set_hl(0, "Constant",      { fg = "#d89aa0" })
   vim.api.nvim_set_hl(0, "Number",        { fg = "#d89aa0" })
 
