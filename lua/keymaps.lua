@@ -58,10 +58,32 @@ end, { desc = "Help tags" })
 -- Restart LSP
 vim.keymap.set(
   "n",
-  "<leader>lspr",
-  "<cmd>LspRestart<CR>", 
-  { noremap = true, silent = true, desc = "Reload JDTLS workspace" }
-)
+  "<leader>lsr",
+  function()
+    local clients = vim.lsp.get_clients({ buf = 0 })
+    local ft = vim.bo.filetype
+
+    local servers_by_ft = {
+      python = "pyright",
+      rust = "rust_analyzer",
+      lua = "lua_ls",
+      c = "clangd",
+      cpp = "clangd",
+      csharp = "omnisharp",
+      java = "jdtls",
+    }
+
+    local server = servers_by_ft[ft]
+    if not server then return end
+
+    if #clients > 0 then
+      for _, client in ipairs(clients) do
+        vim.lsp.stop_client(client.id)
+      end
+    end
+
+    vim.cmd("LspStart " .. server)
+end, { noremap = true, silent = true, desc = "Restart LSP (robust)" })
 
 -- Reload colors
 vim.keymap.set("n", "<leader>uc", function()

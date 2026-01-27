@@ -4,7 +4,7 @@ local function my_colors()
   vim.api.nvim_set_hl(0, "Identifier",    { fg = "#ded6d0" })
   vim.api.nvim_set_hl(0, "@variable",     { fg = "#e0e0e0" })
 
-  vim.api.nvim_set_hl(0, "Statement",     { fg = "#cfd8dc", bold = true })
+  vim.api.nvim_set_hl(0, "Statement",     { fg = "#c1c8d0", bold = true })
   vim.api.nvim_set_hl(0, "Function",      { fg = "#c15f5f", bold = true })
   vim.api.nvim_set_hl(0, "Type",          { fg = "#e0703a", bold = false })
   vim.api.nvim_set_hl(0, "Special",       { fg = "#e0703a", bold = false })
@@ -25,6 +25,13 @@ local function my_colors()
 
   vim.api.nvim_set_hl(0, "ColorColumn",   { bg = "#110000" })
   vim.api.nvim_set_hl(0, "StatusLine",    { fg = "#e0e0e0", bg = "#110000", bold = true })
+
+  -- Highlights
+  vim.api.nvim_set_hl(0, "Visual",        { fg = "#1c1c1c", bg = "#898989" })
+
+  vim.api.nvim_set_hl(0, "Search",        { fg = "#1c1c1c", bg = "#ffaf5f" })
+
+  vim.api.nvim_set_hl(0, "MatchParen",    { bg = "#696969", bold = true })
 
   -- Rainbow braces (alternating between white and orange to help detect missing braces)
   vim.api.nvim_set_hl(0, "RainbowDelimiterRed",     { fg = "#cfcac7" })

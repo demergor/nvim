@@ -36,7 +36,22 @@ return {
       })
 
       vim.lsp.config("pyright", {})
-      vim.lsp.config("clangd", {})
+      vim.lsp.config("omnisharp", {})
+      vim.lsp.config("rust_analyzer", {})
+      vim.lsp.config("lua_ls", {})
+
+      vim.lsp.config("clangd", {
+        cmd = {
+          "clangd",
+          "--compile-commands-dir=build",
+        }, 
+        root_dir = vim.fs.root(0, {
+          "compile_commands.json",
+          "CMakeLists.txt",
+          ".clangd",
+          ".git",
+        }),
+      })
     end, 
   },
 }
