@@ -35,6 +35,26 @@ return {
         },
       })
 
+      vim.api.nvim_create_autocmd("LspAttach", {
+        group = vim.api.nvim_create_augroup("LspKeymaps", { clear = true }),
+        callback = function(ev)
+          local opts = { buffer = ev.buf, silent = true }
+
+          vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+          vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+          vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+          vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+
+          vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+          vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
+
+          vim.keymap.set("n", "<leader>em", function()
+            local vt = vim.diagnostic.config().virtual_text
+            vim.diagnostic.config({ virtual_text = not (vt ~= false) })
+          end, opts)
+        end,
+      })
+
       vim.lsp.config("pyright", {})
       vim.lsp.config("omnisharp", {})
       vim.lsp.config("rust_analyzer", {})
@@ -44,6 +64,8 @@ return {
         cmd = {
           "clangd",
           "--compile-commands-dir=build",
+          "--fallback-style=file:/home/jimmy/.config/nvim/indent/.clang-format",
+          "--log=verbose",
         }, 
         root_dir = vim.fs.root(0, {
           "compile_commands.json",

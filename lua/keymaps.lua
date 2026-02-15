@@ -1,24 +1,15 @@
--- lua/keymaps.lua
-
--- Open new Alacritty window
-vim.keymap.set("n", "<leader>t", ":!nohup alacritty >/dev/null 2>&1 &<CR>", { desc = "Open new Alacritty window" })
-
 -- Move selection up or down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set(
-  "n",
-  "<leader>em",
-  "<cmd>lua vim.diagnostic.open_float(nil, {focus=false})<CR>",
-  { noremap = true, silent = true, desc = "Open floating diagnostics window" }
-)
+-- Center cursor after (half)-page jumps
+vim.keymap.set("n", "<C-U>", "<C-U>zz")
+vim.keymap.set("n", "<C-D>", "<C-D>zz")
 
 -- LaTeX skeletons selection
 vim.keymap.set("n", "<leader>sk", function()
   require("skeletons").insert_skeleton_picker()
 end)
-
 
 -- Grapple keymaps
 vim.keymap.set("n", "<leader>mt", function()
@@ -54,7 +45,7 @@ vim.keymap.set('n', '<leader>fh', function()
   require('telescope.builtin').help_tags()
 end, { desc = "Help tags" })
 
-
+-- LSP
 -- Restart LSP
 vim.keymap.set(
   "n",

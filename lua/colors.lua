@@ -4,7 +4,7 @@ local function my_colors()
   vim.api.nvim_set_hl(0, "Identifier",    { fg = "#ded6d0" })
   vim.api.nvim_set_hl(0, "@variable",     { fg = "#cdd0cd" })
 
-  vim.api.nvim_set_hl(0, "Statement",     { fg = "#cfa8bc", bold = true })
+  vim.api.nvim_set_hl(0, "Statement",     { fg = "#bbbbbb", bold = true })
   vim.api.nvim_set_hl(0, "Function",      { fg = "#c15f5f", bold = true })
   vim.api.nvim_set_hl(0, "Type",          { fg = "#e0703a", bold = false })
   vim.api.nvim_set_hl(0, "Special",       { fg = "#e0703a", bold = false })
@@ -27,7 +27,7 @@ local function my_colors()
   vim.api.nvim_set_hl(0, "StatusLine",    { fg = "#e0e0e0", bg = "#110000", bold = true })
 
   -- Highlights
-  vim.api.nvim_set_hl(0, "Visual",        { fg = "#1c1c1c", bg = "#898989" })
+  vim.api.nvim_set_hl(0, "Visual",        { fg = "#ddddee", bg = "#391311" })
 
   vim.api.nvim_set_hl(0, "Search",        { fg = "#1c1c1c", bg = "#ffaf5f" })
 
@@ -44,6 +44,9 @@ local function my_colors()
 
   -- netrw
   vim.api.nvim_set_hl(0, "Directory",     { fg = "#dcdcdc", bold = true })
+
+  -- Floats
+  vim.api.nvim_set_hl(0, "NormalFloat",   { fg = "#cccccc", bg = "#181313" })
 end
 
 my_colors()

@@ -21,7 +21,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end
 
     local project_name = vim.fn.fnamemodify(root_dir, ":t")
-    local workspace_dir = vim.fn.stdpath("data") .. "/jdtls-workspace/" .. project_name
+    local workspace_dir = vim.fn.stdpath("data") .. "/jdtls-workspaces/" .. project_name
 
     local cmd = {
       "java",
