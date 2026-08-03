@@ -1,7 +1,8 @@
 return {
-    "mbbill/undotree",
-    cmd = "UndotreeToggle",
-    keys = {
-        { "<leader>Ut", "<cmd>UndotreeToggle<CR>", desc = "Toggle Undotree" },
-    },
+  "mbbill/undotree",
+  keys = { {
+    "<leader>ut",
+    "<cmd>UndotreeToggle<CR>",
+    { desc = "Toggle Undotree" },
+  }, },
 }

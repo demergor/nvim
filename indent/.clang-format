@@ -1,8 +1,0 @@
-BasedOnStyle: LLVM
-IndentWidth: 2
-ContinuationIndentWidth: 2
-TabWidth: 2
-AlignAfterOpenBracket: DontAlign
-BreakBeforeBraces: Attach
-AllowShortFunctionsOnASingleLine: false
-ColumnLimit: 0
