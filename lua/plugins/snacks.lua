@@ -44,13 +44,14 @@ return {
   keys = {
     { "<leader>dt", function() Snacks.toggle.dim():toggle() end, },
 
+    { "<leader>fb", function() Snacks.picker.buffers() end },
     { "<leader>ff", function() Snacks.picker.files() end },
     { "<leader>fg", function() Snacks.picker.grep() end },
-    { "<leader>fb", function() Snacks.picker.buffers() end },
     { "<leader>fr", function() Snacks.picker.recent() end },
+    { "<leader>ft", function() Snacks.picker.todo_comments() end },
 
-    { "<leader>fs", function() Snacks.picker.lsp_symbols() end },
     { "<leader>fd", function() Snacks.picker.diagnostics() end },
+    { "<leader>fs", function() Snacks.picker.lsp_symbols() end },
 
     { "<leader>fk", function() Snacks.picker.keymaps() end },
   },

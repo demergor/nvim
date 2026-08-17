@@ -10,7 +10,7 @@ return {
   opts = {
     keymap = {
       preset = "none",
-      ["<CR>"] = { "accept", "fallback" },
+      ["°"] = { "accept", "fallback" },
       ["<Tab>"] = { "select_next", "fallback" },
       ["<S-Tab>"] = { "select_prev", "fallback" },
     },
