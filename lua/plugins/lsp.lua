@@ -15,12 +15,19 @@ return {
         vim.fn.winrestview(view)
       end,
       desc = "Format entire buffer while keeping current view",
-      ft = { "c", "cpp", "h", "hpp", "hxx" },
+      ft = { "c", "cpp", "h", "hpp", "hxx", "java", "json", "rust" },
+    },
+    {
+      "<leader>gr",
+      vim.lsp.buf.references,
+      desc = "Show references",
+      ft = { "c", "cpp", "h", "hpp", "hxx", "java", "json", "rust" },
     },
   },
   config = function()
     local caps = require("blink.cmp").get_lsp_capabilities()
     vim.lsp.config("*", { capabilities = caps })
+
     vim.lsp.config("clangd", {
       cmd = {
         "clangd",
@@ -38,7 +45,14 @@ return {
 
     require("mason").setup()
     require("mason-lspconfig").setup({
-      ensure_installed = { "clangd", "jdtls", "lua_ls", "omnisharp", "pyright" },
+      ensure_installed = {
+        "clangd",
+        "jdtls",
+        "lua_ls",
+        "omnisharp",
+        "pyright",
+        "rust_analyzer"
+      },
       automatic_enable = {
         exclude = { "jdtls" },
       },

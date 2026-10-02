@@ -37,15 +37,19 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "c", "cpp", "h", "hpp", "hxx" },
+  pattern = { "c", "cpp", "h", "hpp", "hxx", "java", "json", "rust" },
   callback = function()
-    local format_file = vim.fn.expand("~/.clang-format")
-    local cmd = "clang-format --style=file:"
+    if vim.bo.filetype == "rust" then
+      vim.bo.formatprg = "rustfmt --edition 2024"
+      vim.bo.formatexpr = ""
+    else
+      local format_file = vim.fn.expand("~/.clang-format")
+      local cmd = "clang-format --style=file:"
       .. format_file
       .. " --assume-filename=%:p"
 
-    vim.bo.equalprg = cmd
-    vim.bo.formatprg = cmd
-    vim.bo.formatexpr = ""
-  end
+      vim.bo.formatprg = cmd
+      vim.bo.formatexpr = ""
+    end
+  end,
 })
