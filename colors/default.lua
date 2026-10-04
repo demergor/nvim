@@ -49,3 +49,54 @@ set_hl(0, "RainbowDelimiterCyan",   { fg = "#cfcac7" })
 -- indent
 set_hl(0, "SnacksIndent", { fg = "#111111" })
 set_hl(0, "SnacksIndentScope", { fg = "#390000" })
+
+-- Render Markdown
+set_hl(0, "RenderMarkdownH1", { fg = "#d8a06a", bold = true })
+set_hl(0, "RenderMarkdownH2", { fg = "#d6996b", bold = true })
+set_hl(0, "RenderMarkdownH3", { fg = "#cfcac7", bold = true })
+set_hl(0, "RenderMarkdownH4", { fg = "#cfcac7" })
+set_hl(0, "RenderMarkdownH5", { fg = "#b2a18a" })
+set_hl(0, "RenderMarkdownH6", { fg = "#8a8a82" })
+
+-- Heading backgrounds
+set_hl(0, "RenderMarkdownH1Bg", { bg = "#181818" })
+set_hl(0, "RenderMarkdownH2Bg", { bg = "#141414" })
+set_hl(0, "RenderMarkdownH3Bg", { bg = "#111111" })
+set_hl(0, "RenderMarkdownH4Bg", { bg = "#0e0e0e" })
+set_hl(0, "RenderMarkdownH5Bg", { bg = "#0b0b0b" })
+set_hl(0, "RenderMarkdownH6Bg", { bg = "#080808" })
+
+-- Code blocks
+set_hl(0, "RenderMarkdownCode", {
+    fg = "#cfcac7",
+    bg = "#181313",
+})
+
+set_hl(0, "RenderMarkdownCodeInfo", {
+    fg = "#b2a18a",
+    bg = "#181313",
+})
+
+set_hl(0, "RenderMarkdownCodeBorder", {
+    fg = "#390000",
+    bg = "#181313",
+})
+
+set_hl(0, "RenderMarkdownCodeFallback", {
+    fg = "#cfcac7",
+    bg = "#181313",
+})
+
+set_hl(0, "RenderMarkdownCodeInline", {
+    fg = "#a1bf95",
+    bg = "#181313",
+})
+
+-- Other Markdown elements
+set_hl(0, "RenderMarkdownBullet", { fg = "#d6996b" })
+set_hl(0, "RenderMarkdownQuote", { fg = "#8a8a82", italic = true })
+set_hl(0, "RenderMarkdownChecked", { fg = "#a1bf95" })
+set_hl(0, "RenderMarkdownUnchecked", { fg = "#8a8a82" })
+set_hl(0, "RenderMarkdownSign", { fg = "#8a8a82" })
+set_hl(0, "RenderMarkdownIndent", { fg = "#390000" })
+set_hl(0, "RenderMarkdownInlineHighlight", { bg = "#33251c" })
