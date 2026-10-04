@@ -8,3 +8,6 @@ vim.keymap.set("n", "<C-D>", "<C-D>zz")
 
 vim.keymap.set("n", "n", "nzz")
 vim.keymap.set("n", "N", "Nzz")
+
+-- Restart lsp
+vim.keymap.set("n", "<leader>lsr", "<cmd>lsp restart<CR>")

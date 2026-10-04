@@ -53,3 +53,9 @@ vim.api.nvim_create_autocmd("FileType", {
     end
   end,
 })
+
+-- Enable auto-disk-reading for jdtls 
+vim.o.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
+  command = "silent! checktime",
+})
