@@ -59,3 +59,22 @@ vim.o.autoread = true
 vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold" }, {
   command = "silent! checktime",
 })
+
+-- Enable comment-continuation on enter for python files (for jupytext)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "python",
+  callback = function()
+    vim.opt_local.formatoptions:append("r")
+  end,
+})
+
+-- Disable auto-indentation for markdown files 
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.autoindent = false
+    vim.opt_local.smartindent = false
+    vim.opt_local.cindent = false
+    vim.opt_local.indentexpr = ""
+  end,
+})
