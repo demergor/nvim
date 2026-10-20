@@ -18,8 +18,8 @@ return {
       enabled = true,
       doc = {
         enabled = true,
-        inline = true,
-        float = true,
+        inline = false,
+        float = false,
       },
       math = { enabled = true },
     },
@@ -54,5 +54,7 @@ return {
     { "<leader>fs", function() Snacks.picker.lsp_symbols() end },
 
     { "<leader>fk", function() Snacks.picker.keymaps() end },
+
+    { "<leader>ri", function() Snacks.image.hover() end },
   },
 }

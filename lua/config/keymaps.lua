@@ -18,3 +18,6 @@ vim.keymap.set("n", "<leader>js", "<cmd>!jupytext --sync %<CR>")
 
 -- Save current file % to pdf/%<.pdf
 vim.keymap.set("n", "<leader>rp", "<cmd>!pandoc % -o pdf/%<.pdf<CR>")
+
+-- Save current project working directory to clipboard (copyq)
+vim.keymap.set("n", "<leader>pwd", "<cmd>silent !copyq copy $PWD<CR>")
