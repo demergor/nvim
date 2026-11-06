@@ -28,19 +28,26 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "c", "cpp", "h", "hpp", "hxx", "java", "json", "python", "rust", },
   callback = function(args)
-    local buf = args.buf
-    local ft = vim.bo[buf].filetype
+    local ft = vim.bo[args.buf].filetype
     local lang = vim.treesitter.language.get_lang(ft) or ft
-    pcall(vim.treesitter.start, buf, lang)
+
+    vim.treesitter.start(args.buf, lang)
   end,
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "c", "cpp", "h", "hpp", "hxx", "java", "json", "rust" },
+  pattern = { "c", "cpp", "h", "hpp", "hxx", "java", "json", "python", "rust" },
   callback = function()
     if vim.bo.filetype == "rust" then
       vim.bo.formatprg = "rustfmt --edition 2024"
+      vim.bo.formatexpr = ""
+    elseif vim.bo.filetype == "python" then
+      vim.bo.formatprg = "ruff format --stdin-filename "
+      .. vim.fn.shellescape(vim.fn.expand("%:p"))
+      .. " -"
+
       vim.bo.formatexpr = ""
     else
       local format_file = vim.fn.expand("~/.clang-format")

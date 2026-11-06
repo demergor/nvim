@@ -15,7 +15,7 @@ return {
         vim.fn.winrestview(view)
       end,
       desc = "Format entire buffer while keeping current view",
-      ft = { "c", "cpp", "h", "hpp", "hxx", "java", "json", "rust" },
+      ft = { "c", "cpp", "h", "hpp", "hxx", "java", "json", "python", "rust" },
     },
     {
       "<leader>gr",
