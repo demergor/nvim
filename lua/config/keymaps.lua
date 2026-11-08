@@ -14,10 +14,10 @@ vim.keymap.set("n", "#" , "#zz")
 vim.keymap.set("n", "<leader>lsr", "<cmd>lsp restart<CR>")
 
 -- Sync jupytext file
-vim.keymap.set("n", "<leader>js", "<cmd>!jupytext --sync %<CR>")
+vim.keymap.set("n", "<leader>js", "<cmd> w | !jupytext --sync %<CR>")
 
 -- Save current file % to pdf/%<.pdf
-vim.keymap.set("n", "<leader>rp", "<cmd>!pandoc % -o pdf/%<.pdf<CR>")
+vim.keymap.set("n", "<leader>rp", "<cmd> w | !pandoc % -o pdf/%<.pdf<CR>")
 
 -- Save current project working directory to clipboard (copyq)
 vim.keymap.set("n", "<leader>pwd", "<cmd>silent !copyq copy $PWD<CR>")
