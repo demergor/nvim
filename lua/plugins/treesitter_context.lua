@@ -1,12 +1,10 @@
 return {
   "nvim-treesitter/nvim-treesitter-context",
+  dependencies = { "nvim-treesitter/nvim-treesitter" },
   opts = {
     enable = true,
-    patterns = {
-      default = {
-        "function",
-        "method",
-      },
-    },
+    max_lines = 3,
+    mode = "cursor",
+    trim_scope = "outer",
   },
 }
