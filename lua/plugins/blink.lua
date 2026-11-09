@@ -6,8 +6,12 @@ return {
   end,
   dependencies = {
     "saghen/blink.lib",
+    "L3MON4D3/LuaSnip",
   },
   opts = {
+    snippets = {
+      preset = "luasnip",
+    },
     keymap = {
       preset = "none",
       ["°"] = { "accept", "fallback" },

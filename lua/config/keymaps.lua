@@ -17,7 +17,8 @@ vim.keymap.set("n", "<leader>lsr", "<cmd>lsp restart<CR>")
 vim.keymap.set("n", "<leader>js", "<cmd> w | !jupytext --sync %<CR>")
 
 -- Save current file % to pdf/%<.pdf
-vim.keymap.set("n", "<leader>rp", "<cmd> w | !pandoc % -o pdf/%<.pdf<CR>")
+-- vim.keymap.set("n", "<leader>rp", "<cmd> w | !pandoc % -o pdf/%<.pdf<CR>")
+vim.keymap.set("n", "<leader>rp", "<cmd> w | !pandoc % -o %:p:h/pdf/%:t:r.pdf<CR>")
 
 -- Save current project working directory to clipboard (copyq)
 vim.keymap.set("n", "<leader>pwd", "<cmd>silent !copyq copy $PWD<CR>")

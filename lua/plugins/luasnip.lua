@@ -6,6 +6,7 @@ return {
       history = true,
       update_events = {"TextChanged", "TextChangedI"},
       enable_autosnippets = true,
+      wordTrig = false,
     })
 
     ls.filetype_extend("markdown", { "tex" })

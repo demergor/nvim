@@ -22,6 +22,7 @@ local autosnippets = {
     t({"$$", ""}),
     i(1),
     t({"", "$$"}),
+    i(0),
   }, {
     snippetType = "autosnippet",
   }),
@@ -46,11 +47,50 @@ local autosnippets = {
     snippetType = "autosnippet",
   }),
 
-  s(";subscr", {
+  s(";sub", {
     i(1, "base"),
     t("_{"),
     i(2, "subscript"),
     t("}"),
+    i(0),
+  }, {
+    snippetType = "autosnippet",
+  }),
+
+  s(";lam", {
+    t("\\lambda"),
+    i(0),
+  }, {
+    snippetType = "autosnippet",
+    wordTrig = false,
+  }),
+
+  s(";Lam", {
+    t("\\Lambda"),
+    i(0),
+  }, {
+    snippetType = "autosnippet",
+  }),
+
+  s(";->", {
+    t("\\rightarrow"),
+    i(0)
+  }, {
+    snippetType = "autosnippet",
+  }),
+
+  s(";=>", {
+    t("\\Rightarrow"),
+    i(0)
+  }, {
+    snippetType = "autosnippet",
+  }),
+
+  s(";x->", {
+    t("\\xrightarrow{"),
+    i(1),
+    t("}"),
+    i(0),
   }, {
     snippetType = "autosnippet",
   }),
@@ -79,6 +119,15 @@ local autosnippets = {
     t({"}", ""}),
     i(2),
     t({"", "\\end{array}"}),
+    i(0),
+  }, {
+    snippetType = "autosnippet",
+  }),
+
+  s(";boxed", {
+    t({"\\boxed{\\begin{aligned}", ""}),
+    i(1),
+    t({"", "\\end{aligned}}"}),
     i(0),
   }, {
     snippetType = "autosnippet",
