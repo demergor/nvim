@@ -138,7 +138,16 @@ local autosnippets = {
     i(0),
   }, {
     snippetType = "autosnippet",
-  })
+  }),
+
+  s(";\\\\em", {
+    t("\\\\["),
+    i(1, "0.5"),
+    t("em]"),
+    i(0),
+  }, {
+    snippetType = "autosnippet",
+  }),
 }
 
 return snippets, autosnippets
