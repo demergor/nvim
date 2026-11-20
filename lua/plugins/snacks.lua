@@ -28,6 +28,11 @@ return {
     notifier = { enabled = true },
     picker = {
       enabled = true,
+      sources = {
+        files = {
+          ignored = false,
+        },
+      },
       win = { input = { keys = {
         ["<C-d>"] = { "list_down", mode = { "i", "n" } },
         ["<C-u>"] = { "list_up", mode = { "i", "n" } },

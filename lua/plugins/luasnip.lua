@@ -3,7 +3,7 @@ return {
   config = function()
     local ls = require("luasnip")
     ls.config.set_config({
-      history = true,
+      history = false,
       update_events = {"TextChanged", "TextChangedI"},
       enable_autosnippets = true,
       wordTrig = false,

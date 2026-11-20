@@ -29,15 +29,26 @@ vim.keymap.set("n", "<leader>rp", function()
   local output = dir .. "/pdf/" .. fname .. ".pdf"
   vim.fn.mkdir(dir .. "/pdf", "p")
 
+  local result
   if vim.tbl_contains({ "m", "cpp", "rs" }, fext) then
-    vim.fn.system(
-      "enscript -E --color -p - " .. vim.fn.shellescape(file)
-      .. " | ps2pdf - " .. vim.fn.shellescape(output)
-    )
+    result = vim.system({
+      'enscript -E --color -p - "$1" | ps2pdf - "$2"',
+      "--",
+      file,
+      output,
+    }, { text = true }):wait()
   else
-    vim.fn.system({
+    result = vim.system({
       "pandoc", file, "-o", output
-    })
+    }, { text = true }):wait()
+  end
+
+  if result.code ~= 0 then
+    vim.notify(
+      result.stderr ~= "" and result.stderr or result.stdout, vim.log.levels.ERROR,
+      { title = "PDF generation failed " }
+    )
+    return
   end
 
   print("Wrote pdf to " .. output)
